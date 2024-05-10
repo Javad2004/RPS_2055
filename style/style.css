@@ -2,6 +2,7 @@
   --bg-gradint: #3B2A9F;
   --secondary-color: #FA8305;
   --primary-100: #5141AA;
+  --bg-color: #ab4e5a;
 }
 
 * {
@@ -45,5 +46,5 @@ input {
 }
 
 .player2 {
-  background-color: #ab4e5a;
+  background-color: var(--bg-color);
 }

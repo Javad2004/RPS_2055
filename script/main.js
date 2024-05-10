@@ -1,3 +1,6 @@
+const custom_red = "#CB1111";
+const custom_green = "#4EFF22";
+
 const singleMode = document.getElementById("singleMode");
 const multiMode = document.getElementById("multiMode");
 const back_1 = document.getElementById("back_1");
@@ -62,32 +65,32 @@ function singleplayer(playerTurn) {
     }
     else if (playerTurn == "Rock" && AITurn[AITurnIndex] == "Paper") {
         headerBoard.innerHTML = "You Lost!";
-        headerBoard.style.color = "#CB1111";
+        headerBoard.style.color = custom_red;
         AIScore++;
     }
     else if (playerTurn == "Rock" && AITurn[AITurnIndex] == "Scissors") {
         headerBoard.innerHTML = "You Win!";
-        headerBoard.style.color = "#4EFF22";
+        headerBoard.style.color = custom_green;
         PlayerScore++;
     }
     else if (playerTurn == "Paper" && AITurn[AITurnIndex] == "Rock") {
         headerBoard.innerHTML = "You Win!";
-        headerBoard.style.color = "#4EFF22";
+        headerBoard.style.color = custom_green;
         PlayerScore++;
     }
     else if (playerTurn == "Paper" && AITurn[AITurnIndex] == "Scissors") {
         headerBoard.innerHTML = "You Lost!";
-        headerBoard.style.color = "#CB1111";
+        headerBoard.style.color = custom_red;
         AIScore++;
     }
     else if (playerTurn == "Scissors" && AITurn[AITurnIndex] == "Paper") {
         headerBoard.innerHTML = "You Win!";
-        headerBoard.style.color = "#4EFF22";
+        headerBoard.style.color = custom_green;
         PlayerScore++;
     }
     else if (playerTurn == "Scissors" && AITurn[AITurnIndex] == "Rock") {
         headerBoard.innerHTML = "You Lost!";
-        headerBoard.style.color = "#CB1111";
+        headerBoard.style.color = custom_red;
         AIScore++;
     }
 
@@ -103,32 +106,32 @@ function multiplayer(player1Turn, player2Turn) {
     }
     else if (player1Turn == "Rock" && player2Turn == "Paper") {
         headerBoardMulti.innerHTML = "Player 2 Wins!";
-        headerBoardMulti.style.color = "#CB1111";
+        headerBoardMulti.style.color = custom_red;
         player2Score++;
     }
     else if (player1Turn == "Rock" && player2Turn == "Scissors") {
         headerBoardMulti.innerHTML = "Player 1 Wins!";
-        headerBoardMulti.style.color = "#4EFF22";
+        headerBoardMulti.style.color = custom_green;
         player1Score++;
     }
     else if (player1Turn == "Paper" && player2Turn == "Rock") {
         headerBoardMulti.innerHTML = "Player 1 Wins!";
-        headerBoardMulti.style.color = "#4EFF22";
+        headerBoardMulti.style.color = custom_green;
         player1Score++;
     }
     else if (player1Turn == "Paper" && player2Turn == "Scissors") {
         headerBoardMulti.innerHTML = "Player 2 Wins!";
-        headerBoardMulti.style.color = "#CB1111";
+        headerBoardMulti.style.color = custom_red;
         player2Score++;
     }
     else if (player1Turn == "Scissors" && player2Turn == "Paper") {
         headerBoardMulti.innerHTML = "Player 1 Wins!";
-        headerBoardMulti.style.color = "#4EFF22";
+        headerBoardMulti.style.color = custom_green;
         player1Score++;
     }
     else if (player1Turn == "Scissors" && player2Turn == "Rock") {
         headerBoardMulti.innerHTML = "Player 2 Wins!";
-        headerBoardMulti.style.color = "#CB1111";
+        headerBoardMulti.style.color = custom_red;
         player2Score++;
     }
 
