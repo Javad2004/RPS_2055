@@ -1,75 +1,277 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- insert bootstrap link -->
-    <link rel="stylesheet" href="./style/bootstrap/bootstrap.css">
-    <!-- styles -->
-    <link rel="stylesheet" href="./style/style.css" />
-    <!-- title -->
-    <title>Rock Paper Scissor</title>
-  </head>
-  <body class="px-md-5 px-2">
+    
+  
+    <link href=" https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css " rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/main.css"> 
 
-    <main class="h-100 flex-column align-items-center justify-content-center text-white" id="main">
-      <h1 class="my-5">Rock Paper Scissors</h1>
-      <button class="text-white rounded-3 col-3 col-md-2 my-3 py-1" type="button" id="singleMode">SinglePlayer</button>
-      <button class="text-white rounded-3 col-3 col-md-2 my-3 py-1" type="button" id="multiMode">MultiPlayer</button>
-    </main>
+    <meta name="description" content="Free Web Game Website">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon2.png">
+    <title>GAMiFY</title>
 
-    <main class="main_1 h-100 flex-column align-items-center justify-content-center text-white" id="main_1">
-      <div class="d-flex align-items-center justify-content-start w-100">
-        <h1 class="my-3 text-center w-100" id="headBoard">Rock Paper Scissors</h1>
-        <button class="position-absolute col-2 col-md-1 border-3 border-white rounded-3 text-white py-1" type="button" id="back_1">BACK</button>
-      </div>
-      <h2 class="my-3" id="scoreBoard">You 0 : 0 Ai</h2>
-      <h3 class="my-3" id="turnBoard">Your Turn !</h3>
-      <div class="mt-5 d-flex">
-        <div class="px-5 d-flex flex-column align-items-center form-check">
-          <img class="img-fluid" src="./assets/images/paper.png" alt="paper">
-          <input class="my-5" type="radio" name="flexRadioDefault" id="radio_paper">
-        </div>
-        <div class="p-0 d-flex flex-column align-items-center form-check">
-          <img class="img-fluid" src="./assets/images/scissors.png" alt="scissors">
-          <input class="my-5" type="radio" name="flexRadioDefault" id="radio_scissors">
-        </div>
-        <div class="px-5 d-flex flex-column align-items-center form-check">
-          <img class="img-fluid" src="./assets/images/rock.png" alt="rock">
-          <input class="my-5" type="radio" name="flexRadioDefault" id="radio_rock">
-        </div>
-      </div>
-      <button class="col-3 col-sm-2 border-3 border-white rounded-3 text-white py-1" type="button" id="button">START</button>
-    </main>
+    
+</head>
 
-    <main class="main_2 h-100 flex-column align-items-center justify-content-center text-white" id="main_2">
-      <div class="d-flex align-items-center justify-content-start w-100">
-        <h1 class="my-3 text-center w-100" id="headBoardMulti">Rock Paper Scissors</h1>
-        <button class="position-absolute col-2 col-md-1 border-3 border-white rounded-3 text-white py-1" type="button" id="back_2">BACK</button>
-      </div>
-      <h2 class="my-3" id="scoreBoardMulti">Player 1 --- 0 : 0 --- Player 2</h2>
-      <h3 class="my-3" id="turnBoardMulti">START</h3>
-      <div class="d-flex my-5 gap-5">
-        <div class="d-flex flex-column align-items-center">
-          <div class="d-flex gap-3 player1 p-5 rounded-5">
-            <img class="img-fluid" src="./assets/images/paper.png" alt="paper">
-            <img class="img-fluid" src="./assets/images/scissors.png" alt="scissors">
-            <img class="img-fluid" src="./assets/images/rock.png" alt="rock">
+
+
+
+
+<body style="background-color: var(--bg-gradiant); overflow-x: hidden; max-width: 1440px;" class="">
+    <div class="container-lg" style="">
+      <header >
+
+        <nav class="navbar navbar-expand-lg  fixed-top" style="background-color: var(--bg-gradiant);">
+          <div class="container-fluid">
+            <a class=" fs-3 navbar-brand text-white me-auto" href="#"><i class="bi bi-rocket-takeoff"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <div class="w-100 d-flex justify-content-md-end justify-content-center">
+                <ul class="navbar-nav  mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="fs-5 mx-5 nav-link text-white" href="./index.html">Home</a>
+                    <div class="d-flex flex-row" style="position: relative; left: 40px;">
+                      <div class="line" style="width: 40px;"></div>
+                      <div class="line " style="width: 7px; margin-left: 3px;"></div>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class=" fs-5 mx-5 nav-link text-white" href="./games.html">Games</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class=" fs-5 mx-5 nav-link text-white" href="./news.html" >News</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class=" fs-5 mx-5  nav-link navItem text-white" href="./about.html" >About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <button class=" navItem themeButton">light</button>
+                  </li>
+                </ul>
+              </div>
+              
+            </div>
           </div>
-          <h3 class="mt-5" id="player1Select"></h3>
-        </div>
-        <div class="d-flex flex-column align-items-center">
-          <div class="d-flex gap-3 player2 p-5 rounded-5">
-            <img class="img-fluid" src="./assets/images/paper.png" alt="paper">
-            <img class="img-fluid" src="./assets/images/scissors.png" alt="scissors">
-            <img class="img-fluid" src="./assets/images/rock.png" alt="rock">
+        </nav>
+  
+  
+      </header>
+  
+      <div class="px-5">
+        <div class = "container mt-5 intro" id="section1">
+          <div class="d-md-none d-sm-none d-lg-block">
+            <img src="./assets/images/unity 1.png" class="unity">
+            <img src="./assets/images/unreal 1.png" class="unreal">
+            <img src="./assets/images/cry 1.png" class="cry">
           </div>
-          <h3 class="mt-5" id="player2Select"></h3>
+           
+    
+          <div class="row d-flex justify-content-around ">
+    
+            <div class="col-md-5 d-none d-sm-block order-md-2">
+              <img class=""  src="./assets/images/joy_stick.png">
+            </div>
+    
+            <div class="col-md-5 order-md-1 text-center text-md-start">
+              <div class=" mx-auto mt-5" style="position: relative; top:5rem;">
+                <p class="lilOrange">tell me are you bored in the house?</p>
+                <h1 class="lh-lg">Are You Bored In The House?</h1>
+    
+                <p class=" introPara lh-lg">
+                  are you bored in the house and you're in the house bored?
+                  bored in the house and you're in the house bored?
+                  bored in the mfing in the house bored and you're bored in the house in you're in the house bored ?
+                </p>
+    
+                <a href="./games.html">
+                  <button class="gamesBtn btn px-5 py-2 mt-5 "><h6>Click Here!</h6></button>
+                </a>
+              </div>
+              
+            </div>
+    
+          </div>
+        
+        </div>  
+        
+        
+        <div class=" mx-lg-5 text-center text-md-start" id="section2" >
+            
+            <h2 style="padding-top: 110px; padding-bottom: 50px; font-size: 30px; margin-top: 0px; font-family: Bold;">Currently Trending Games</h2>
+            <div class="row">
+    
+              <div class="col-md col-sm-6">
+  
+                <div class="card" style="background-color: var(--bg-gradiant); border: none;">
+                  <img class="img-fluid imgHov card-img-top" src="./assets/images/trend1.png">
+                  <div class="card-body">
+                    <h5 style="text-align: center; font-family: SemiBold; " class="large my-4 txtHov card-text"><i class="bi bi-fire"></i> 36 Followers</h5>
+                  </div>
+                </div>
+  
+              </div>
+    
+              <div class="col-md col-sm-6">
+                
+                <div class="card" style="background-color: var(--bg-gradiant); border: none;">
+                  <img class="img-fluid imgHov card-img-top" src="./assets/images/trend2.png">
+                  <div class="card-body">
+                    <h5 style="text-align: center; font-family: SemiBold; " class="large my-4 txtHov card-text"><i class="bi bi-fire"></i> 36 Followers</h5>
+                  </div>
+                </div>
+  
+              </div>
+    
+              <div class="col-md col-sm-6">
+  
+                <div class="card" style="background-color: var(--bg-gradiant); border: none;">
+                  <img class="img-fluid imgHov card-img-top" src="./assets/images/trend3.png">
+                  <div class="card-body">
+                    <h5 style="text-align: center; font-family: SemiBold; " class="large my-4 txtHov card-text"><i class="bi bi-fire"></i> 36 Followers</h5>
+                  </div>
+                </div>
+  
+              </div>
+    
+              <div class="col-md col-sm-6">
+                
+                <div class="card" style="background-color: var(--bg-gradiant); border: none;">
+                  <img class="img-fluid imgHov card-img-top" src="./assets/images/trend4.png">
+                  <div class="card-body">
+                    <h5 style="text-align: center; font-family: SemiBold; " class="large my-4 txtHov card-text"><i class="bi bi-fire"></i> 36 Followers</h5>
+                  </div>
+                </div>
+  
+              </div>
+    
+            </div>
+    
+        </div>
+    
+        <div class="" id="section3">
+            <h2 class="text-lg-center text-center text-md-start" style="font-family: SemiBold; margin: 100px 0;">Play Our Games To Be Not a Better Gamer But a Better Person</h2>
+    
+            <div class="">
+              
+              <h3 class="mb-4 mx-sm-5" style="font-family : SemiBold">You Will Enjoy Our Games</h3>
+    
+              <p class="mb-5 mx-sm-5">
+                 so go ahed and sign up and enjoy thousands of amusing games
+                
+              </p>
+              
+           </div>
+            <div class="w-100 d-flex">
+              <img class=" img-fluid mx-auto spidy" src="./assets/images/midwayspiderman.png">
+            </div>
+            
+        </div>
+        <div class=" w-100  d-lg-block" style="margin : 150px  0;">
+            <h2 style="text-align: center; font-family: SemiBold;" class="mb-4">Our Recent Projects</h2>
+            <p style="text-align: center; margin-bottom: 80px; font-family: Regular;">You can see our recent projects here and realize how good of a team we are</p>
+    
+            <div class="row  mb-4">
+              <img class=" col-md-4 col-sm-6 col-12 mb-4 p1 order-md-0 order-2" src="./assets/images/colg1.png" >
+              <img class=" col-md-4 col-sm-6 col-12 mb-4 p1 d-none d-sm-block order-md-1 order-3" src="./assets/images/colg2.png" >
+              <img class=" col-md-4 col-sm-7 col-12 mb-4 p1 order-md-2 order-0" src="./assets/images/colg3.png" >
+              <img class=" col-md-3 col-sm-4 col-12 mb-4 p1 d-none d-sm-block order-md-3 order-4" src="./assets/images/colg5.png" >
+              <img class=" col-md-4 col-sm-8 col-12 mb-4 p1 d-none d-sm-block order-md-4 order-5 " src="./assets/images/colg4.png" >
+              <img class=" col-md-5 col-sm-5 col-12 mb-4 p1 order-md-5 order-1" src="./assets/images/colg6.png" >
+            </div>
+            <div class="w-100 d-flex">
+              <button class="seeAllBtn btn btn-lg px-4 py-3 mt-5 mx-auto" style="font-family: SemiBold;">SEE ALL</button>
+            </div>
+            
+          </div>
+          
+      </div>
+    
+        <div class=" section mx-lg-5" id="section4">
+    
+            <div class="text-center text-md-start">
+              <div>
+                <h2 style="font-family: Medium;"class="mb-4">Subscribe To Our Newsletter</h2>
+                <h6 style="font-family: Regular; margin-bottom: 70px;">we have many events and discounts so you better have an ear inside our company</h6>
+              </div>
+             
+              <form class=" row text-center text-sm-start  py-sm-3 mx-1 mx-sm-0 " style="background-color: var(--brown); border-radius: 20px;">
+                <label for="fname" class="col-md-7 col-12 ">
+                  <div class="px-md-5 px-sm-3 px-2 py-4">
+                    <h2 style="font-family: Medium;" class="mb-3">Stay in loop</h2>
+                    <p style="font-family: Regular;">subscribe to our newletter to get the latest news right away</p>
+                  </div>
+                  
+                  </label>
+                  
+                <div class=" d-flex col-md-5 col-12 ">
+                  <div class= "w-100 my-md-auto mb-4 mx-md-2 mx-sm-3 mx-2" style="position: relative;">
+                    <input class="w-100" style=" padding: 13px 10px ; border-radius: 10px;" type="text" id="fname" name="fname" placeholder="Your Email Address">
+                    <button class="px-3 py-1 my-2 text-white" style="position:absolute; right:10px; border-radius: 10px; background: var(--secondary); border: none;">Continue</button>
+                  </div>
+                  
+                  
+                </div>
+              </form>
+            </div>
         </div>
       </div>
-    </main>
+    </div>
+    
 
-    <!-- scripts -->
-    <script src="./script/main.js"></script>
-  </body>
+    <footer class="footerHome container-fluid px-5 w-100" style="margin-top: 160px; padding-top:80px ; background-color:var(--black);">
+      
+        <div class="row d-flex justify-content-around">
+
+          <div class="col-lg-4 col-sm-5 col-12 my-3" >
+            <h3 ><i class="bi bi-rocket-takeoff mb-5"></i></i></h3>
+            <ul>
+              <li><a href="#"><p>hi idk what to write here but lorem seemed kind of unfinished uk..so ya</p></a></li>
+              <li><a href="#"><p>Lorem!</p></a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-sm-5 col-12 my-3">
+            <h5>About us</h5>
+            <ul>
+              <li><a href="#"><p>Zeux</p></a></li>
+              <li><a href="#"><p>Portfolio</p></a></li>
+              <li><a href="#"><p>Careers</p></a></li>
+              <li><a href="#"><p>Contact us</p></a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg col-12 my-3">
+            <h5>Contact us</h5>
+            <ul>
+              <li><a href="#"><p>you can contact us via phone number or social networks</p></a></li>
+              <li><a href="#"><p>0936405206</p></a></li>
+            </ul>
+          </div>
+
+
+          <div class="col-lg  col-12 my-3">
+            <h5 style="margin-bottom: 80px;">Follow us</h5>
+            <div class="">
+              <a href="#"><i class="bi bi-facebook mx-2 fs-2"></i></a>
+              <a href="#"><i class="bi bi-instagram mx-2 fs-2"></i></a>
+              <a href="#"><i class="bi bi-twitter mx-2 fs-2"></i></a>
+              <a href="#"><i class="bi bi-linkedin mx-2 fs-2"></i></a>
+            </div>
+          </div>
+
+        </div>
+    </footer>
+    <div style="background-color: var(--black);">
+    <hr style=" border-top: 2px solid white; width: 100%; margin: 0px;">
+    
+      <p class="py-5 text-center m-0">Copyright 2022 Arsam All Rights Rcerved</p>
+    </div>
+</body>
 </html>
