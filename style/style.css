@@ -36,9 +36,16 @@ button {
   border: solid;
 }
 
-input {
+.form-check-input {
   height: 25px;
   width: 25px;
+  background-color: var(--secondary-color);
+  border-color: white;
+}
+
+.form-check-input:checked {
+  background-color: var(--secondary-color);
+  border-color: white;
 }
 
 .player1 {
