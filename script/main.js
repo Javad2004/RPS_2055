@@ -138,7 +138,7 @@ function multiplayer(player1Turn, player2Turn) {
     turnBoardMulti.innerHTML = "PRESS \"SPACE\" KEY TO PLAY AGAIN";
     scoreBoardMulti.innerHTML = `Player 1 --- ${player1Score} : ${player2Score} --- Player 2`;
     player1Select.innerHTML = `Player 1 Chosed “${player1Turn}”`;
-    player2Select.innerHTML = `Player 1 Chosed “${player2Turn}”`;
+    player2Select.innerHTML = `Player 2 Chosed “${player2Turn}”`;
     player1 = null;
     player2 = null;
 }
